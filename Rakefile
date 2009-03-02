@@ -20,6 +20,7 @@ spec = Gem::Specification.new do |s|
   # s.executables    = ['trim']
   
   # s.add_dependency('gem_name', '~> 0.0.1')
+  s.add_dependency('libxml-ruby')
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
