@@ -15,7 +15,7 @@ spec = Gem::Specification.new do |s|
   s.summary          = "Gem interface to the URL shortening service, tr.im (http://tr.im/)"
   s.author           = 'Sven Aas'
   s.email            = 'sven.aas@gmail.com'
-  s.homepage         = 'http://github.com/svenaas'
+  s.homepage         = 'http://github.com/svenaas/trim/'
   s.files            = %w(README.rdoc Rakefile) + Dir.glob("{lib,test}/**/*")
   # s.executables    = ['trim']
   
