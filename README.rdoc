@@ -30,6 +30,14 @@ Windows users should omit the sudo, of course.
     require 'trim'
     
     Trim.trim('http://www.google.com') # Returns trimmed URL, or nil if any error occurs
+    
+If you want to use an account that tr.im knows about you can provide 
+your valid username and password:
+    
+    Trim.trim('http://www.google.com', 'username', 'password')
+
+NOTE: as of this writing (3 Mar 2009) tr.im does not support SSL so 
+this username and password will be sent over unencrypted HTTP.
 
 == Testing
 
