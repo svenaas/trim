@@ -6,11 +6,24 @@ The trim gem is a wrapper for the tr.im URL shortening service,
 which can be found at http://tr.im/
 
 This software is not affiliated with tr.im in any way. tr.im is 
-a product of The Nambu Network (http://www.nambu.com/).
+a product of The Nambu Network: http://www.nambu.com/.
 
 == Installation
 
-    sudo gem install trim
+First, if you do not already have GitHub in your gem sources, 
+execute the following command to add it:
+
+    sudo gem sources -a http://gems.github.com
+
+Then you can install this gem with:
+  
+    sudo gem install svenaas-trim
+    
+If you prefer not to add GitHub to your gem sources, install via:
+
+    sudo gem install svenaas-trim -s http://gems.github.com 
+    
+Windows users should omit the sudo, of course.
 
 == Usage
 
@@ -18,9 +31,29 @@ a product of The Nambu Network (http://www.nambu.com/).
     
     Trim.trim('http://www.google.com') # Returns trimmed URL, or nil if any error occurs
 
+== Testing
+
+The standard tests run via
+    
+    rake test
+    
+use mock code to verify functionality instead of depending on 
+online interaction with tr.im's servers. This is done for several
+reasons, primarily because the service provider deserves this basic 
+consideration, but also because tr.im limits the number of URLs
+which can be shortened during a particular amount of time. 
+
+If you need to verify online functionality you can run 
+
+    rake test:online
+    
+for simple-case testing that the servers are reachable via the
+expected address and API. Please note that this test consumes
+online resources, and use it sparingly. 
+
 == License
 
-Copyright (c) 2009 Sven Aas (mailto:sven.aas@gmail.com)
+Copyright (c) 2009 Sven Aas
 
 Permission is hereby granted, free of charge, to any person
 obtaining a copy of this software and associated documentation
